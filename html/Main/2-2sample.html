@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: beige; /* boby배경화면*/
+        }
+        p{counter-increment: rint;}
+        p::before {content:counter(rint)"." ;} /*숫자로 순서정하기*/
+        p::after{ content: "-" attr(data-page)"page";}
+        p::first-letter{
+            font-size: 3em; /*1em은16픽셀정도됨*/
+        }
+        p::selection{
+            background: black;
+            color: red;
+        }
+
+
+
+
+
+        a{
+            text-decoration: none;
+        }
+
+        a:link::after {content: "-"attr(href);}
+
+
+
+
+
+        
+        /* h1 ~ h2 {   '+' h1바로 붙어있는h2에만 적용해달라는뜻
+                      '~'h1보다 밑에있는애들 색깔입혀줘
+            color:red;
+        } */
+
+        h1:hover{  /*hover마우스올리면 색깔이 바뀌게해줘*/
+            color: blue
+        } */
+
+        h1:first-of-type{ /*h1중에 첫번째만 색깔 h1:last-op-type{color:blue;}는 마지막껏만*/
+            color: red;
+        }
+
+        p::first-letter{
+            font-size: 50px;
+        }
+
+        p::first-line{   
+            color: red;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <p data-page="52">
+        Donald Trump has ruled out another presidential debate against his rival Kamala Harris before November's election.
+He said on Thursday - two days after the pair's first showdown in Philadelphia - that Harris only wanted a rematch because he "clearly" won.
+Several instant polls taken after Tuesday's contest indicated voters felt Harris had performed better than her Republican opponent.
+Trump added that Harris should instead "focus" on her job as vice-president.
+
+Shortly after, at a campaign rally in North Carolina, Harris responded by saying they "owe" voters another debate because "what is at stake could not be more important".
+Polls suggest the two candidates are in an extremely tight race with just two months to go before the election.
+Both claimed victory after Tuesday's 90-minute debate on ABC News, in which Harris rattled Trump with a string of personal attacks that put him on the defensive. These included comments about the size of his rally crowds and his conduct during the 6 January 2021 riot at the US Capitol.
+Trump and his supporters have since accused the two ABC journalists that moderated the debate of being unfair and biased in favour of Harris. He said on Thursday that he did not need another debate.
+    </p>
+
+    <p>
+        Donald Trump has ruled out another presidential debate against his rival Kamala Harris before November's election.
+He said on Thursday - two days after the pair's first showdown in Philadelphia - that Harris only wanted a rematch because he "clearly" won.
+Several instant polls taken after Tuesday's contest indicated voters felt Harris had performed better than her Republican opponent.
+Trump added that Harris should instead "focus" on her job as vice-president.
+
+Shortly after, at a campaign rally in North Carolina, Harris responded by saying they "owe" voters another debate because "what is at stake could not be more important".
+Polls suggest the two candidates are in an extremely tight race with just two months to go before the election.
+Both claimed victory after Tuesday's 90-minute debate on ABC News, in which Harris rattled Trump with a string of personal attacks that put him on the defensive. These included comments about the size of his rally crowds and his conduct during the 6 January 2021 riot at the US Capitol.
+Trump and his supporters have since accused the two ABC journalists that moderated the debate of being unfair and biased in favour of Harris. He said on Thursday that he did not need another debate.
+    </p>
+    <hr>
+
+    <h1><a href="http://www.naver.com">네이버</a></h1>
+    <h1><a href="http://www.daum.net">다음 </a></h1>
+</body>
+</html>

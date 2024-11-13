@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var p;
+
+        function init() {
+            p= document.getElementById("p");
+            p.onmouseover = function () {
+                this.style.backgroundColor = "orchid";
+            }
+            
+        
+        p.addEventListener("mouseout",
+        function() {
+            this.style.backgroundColor = "white";
+        });
+    }
+    </script>
+</head>
+<body onload="init()">
+
+    <p id="p">
+    마우스 올리면 orchid 색으로 변경
+    </p>
+    <hr>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+        list-style: none;
+        float: left;
+        padding: 15px;
+        }
+
+        li:nth-child(2n){  /*2n짝수를 나타냄 */
+            background-color: #ff0003;
+        }
+
+        li:nth-child(2n+1){  /*2n+1홀수 를 나타냄 */
+            background-color: #800000;
+        }
+
+        li:first-child{       /*first-child 처음부분 둥글게 오른쪽위부터 왼쪽으로 10 0 0 10모서리로 돎*/
+        border-radius: 10px 0 0 10px;
+     }
+        li:last-child{        /*last-child 마지막부분 둥글게 왼쪽위부터 왼쪽으로 10 0 0 10모서리로 돎*/
+        border-radius: 0 10px 10px 0;
+        }
+
+        li:hover{     /*hover 마우스대면 바뀜색깔 메뉴만들떄사용*/
+            color:wheat;
+        }
+
+        hr{
+            clear:both;
+        }
+
+        .box{
+            width:100px;
+            height:100px;
+            border: 1px solid black;
+            margin:10px;
+            float:right;    /*float는right left에따라서 왼쪽오른쪽으로 옮김 그림을*/
+        }
+
+        .red{
+            background-color: red;
+        }
+
+        .blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Fouth</li>
+        <li>Fifth</li>
+        <li>Sixth</li>
+        <li>Seventh</li>
+    </ul>
+
+    <hr>
+    <div class="box red">
+
+    </div>
+    <div class="box blue">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css1장</title>
+    <style>
+        /*CSS는 후입력한게 앞에명령어에 적용됨*/
+        h1{
+            color: blue;
+        }
+
+        *{  /*   "*"은 전부 색깔지정*/
+            color: red;
+        }
+
+        h2 {
+            color: brown;
+        }
+
+        #a{
+            color: chartreuse;  /*id는 #이고 중복x*/
+        }
+
+        .b{
+            color:fuchsia; /*class는.  */
+        }
+
+        .select {color: purple;}
+
+        input[type=text] {background: red;}
+
+        input[type=password] {background: blue;}
+
+
+        #car > h1{
+            color: yellow;
+        }
+
+        #fruit > h1{
+            color: blanchedalmond;
+        }
+
+        .c{
+            color: black;
+        }
+
+        #c > h1 {
+            color: crimson;
+        }
+
+
+        /*
+        h1{
+            color: aqua;
+            font-size: 60px;
+        }
+        #a{
+            background-color: red;
+        }
+        #b{
+            background-color: blue;
+        }
+        */
+    </style>
+</head>
+<body>
+    <div id="a">안녕하세요</div>
+    <!--문장의 줄끝까지-->
+    <span id="b">안녕하세요</span>
+    <!--span 글자까지 색칠-->
+    <h1>블록체인 수업</h1>
+    <h2>홈페이지 기초 수업</h2>
+    <hr>
+    <h1 id="a">HTML</h1> <!-- id-->
+    <h2 class="b">CSS</h2>
+
+    <ul>
+        <li class="select">asdf</li>
+        <li>asdf </li>
+    </ul>
+
+    <form>
+        <input type="text" />
+        <input type="password" />
+    </form>
+
+    <hr>
+    자동차종류 <br>
+    <div id="c">
+        <h1>현대</h1>
+        <div>
+            <h1 class="c">쏘나타</h1>
+            <h1>아반떼</h1>
+        </div>
+    </div>
+    과일종류 <br>
+    <div id="fruit">
+        <h1>열대과일</h1>
+        <div>
+            <h1>바나나</h1>
+        </div>
+
+    </div>
+</body>
+</html>

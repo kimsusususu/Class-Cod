@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .pord-list{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+
+        }
+
+        .pord-list li{
+            position: relative;
+            float:left;
+            padding: 0;
+            margin: 10px;
+            overflow: hidden;
+
+        }
+
+        .pord-list img{
+            margin: 0;
+            padding: 0;
+            float: left;
+            z-index: 5;
+        }
+
+
+
+        .pord-list .caption h1, .pord-list .caption p{
+            color: #f00;
+            text-align: center;
+        }
+
+        .pord-list .caption{
+            position:absolute;
+            top:200px;
+            width: 300px;
+            height: 200px;
+            padding-top: 20px;
+            background-color: rgba(0,0,0,0.6);
+            opacity: 0;
+            transition: 0.2s;
+            z-index: 10;
+        }
+
+        .pord-list li:hover .caption{
+            transform: translateY(-200px);
+            opacity: 1;
+
+
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>인형 목록</h1>
+    <div>
+        <ul class="pord-list">
+            <li>
+                <img src="img/product.jpg">
+                <div class="caption">
+                    <h1>상품1</h1>
+                    <p>상품 1 설명 텍스트</p>
+                    <p>가격 : 5만원</p>
+                </div>
+            </li>
+
+            <li>
+                <img src="img/product2.jpg">
+                <div class="caption">
+                    <h1>상품2</h1>
+                    <p>상품 2 설명 텍스트</p>
+                    <p>가격 : 10만원</p>
+                </div>
+            </li>
+
+            <li>
+                <img src="img/product3.jpg">
+                <div class="caption">
+                    <h1>상품3</h1>
+                    <p>상품 3 설명 텍스트</p>
+                    <p>가격 : 15만원</p>
+                </div>
+            </li>
+        </ul>
+        
+
+    </div>
+
+    
+</body>
+</html>

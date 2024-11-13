@@ -1,0 +1,52 @@
+<!-- <%- include('./include/_header') %>
+
+<body>
+  <h1><i class="fa-solid fa-address-card"></i>Contacts Page</h1>
+  <ul>
+    <% users.forEach(user=>{ %>
+      <li>
+        <strong>Name: </strong>
+        <%= user.name %>
+      </li>
+      <li>
+        <strong>Email: </strong>
+        <%= user.email %>
+      </li>
+      <li>
+        <strong>Phone: </strong>
+        <%= user.phone %>
+      </li>
+      <% });%>
+  </ul>
+
+  <h2>
+    <%= heading %>
+  </h2>
+
+<%- include('./include/_footer') %> -->
+<%- include('./include/_header') %>
+
+<body>
+  <h1><i class="fa-solid fa-address-card"></i>Contacts Page</h1>
+  <ul>
+    <% users.forEach(user=>{ %>
+      <li>
+        <strong>Name: </strong>
+        <%= user.name %>
+      </li>
+      <li>
+        <strong>Email: </strong>
+        <%= user.email %>
+      </li>
+      <li>
+        <strong>Phone: </strong>
+        <%= user.phone %>
+      </li>
+      <% });%>
+  </ul>
+
+  <h2>
+    <%= heading %>
+  </h2>
+
+<%- include('./include/_footer') %>

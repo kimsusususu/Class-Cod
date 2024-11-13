@@ -1,0 +1,108 @@
+body{
+    font-family: "맑은 고딕","고딕","굴림";
+}
+
+#wrapper{
+    width: 800px;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    background-color: #F46075;
+    height: 150px;    /*height 위아래*/
+    background-image: url(../img/8.png);
+    background-repeat: no-repeat;
+    background-position:right center;
+}
+
+header nav{
+    width: 70%;
+    float: left;
+    margin-top: 50px;
+}
+
+nav ul{
+    list-style-type: none; /*점 지우기*/
+}
+
+nav ul li{
+    float: left;
+    margin: 15px;
+    font-weight: bold; /*글자 굵게*/
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none; /*밑줄 삭제*/
+}
+
+nav ul li a:hover{  /*마우스올릴때 바뀌는색*/
+    color: yellow;
+}
+
+h2{
+    font-size: 1.5em;
+}
+
+section{
+    width: 580px;
+    float: left;
+    padding: 5px;
+}
+
+section article{
+    width: 250px;
+    height: 220px;
+    float: left;
+    margin:5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+p{
+    font-size: 12px;
+    line-height: 20px;
+}
+
+aside{
+    width: 200px;
+    float: right;
+    height: auto;
+    margin-top: 80px;
+    border:2px solid chartreuse;
+    text-align: center;
+}
+
+footer{
+    clear: both;  /*내릴떄 보통쓰는명령어*/
+    width: 800px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.at1:hover{
+    background-color: #cf9;
+    border: 1px solid green;
+}
+
+.at2:hover{
+    background-color:  red;
+    border: 1px solid yellow;
+}
+
+.at3:hover{
+    background-color: #F46075;
+    border: 1px solid darkblue;
+}
+
+.at4:hover{
+    background-color: #594648;
+    border: 1px solid rgb(52, 129, 75);
+}
+
+.at1, .at2,.at3,.at4{  /*천천히 올리기*/
+    transition:2s;
+}

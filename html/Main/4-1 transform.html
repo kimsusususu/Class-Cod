@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .origin{
+            width: 160px;
+            height: 240px; /*div는 기본적으로 위스 하이트값 줌*/
+            border: 1px solid black; 
+            margin: 40px;
+            float: left;
+        }
+
+        .rose{
+            transform: rotateZ(10deg);  /*z축 변환*/
+        }
+
+        .ltop .rose{
+            transform-origin: left top;
+        }
+
+        .lbottom .rose{
+            transform-origin: left bottom;
+
+        }
+
+        .rtop .rose{
+            transform-origin: right top ;
+        }
+
+        .rbottom .rose{
+            transform-origin: right top;
+        }
+    </style>
+</head>
+<body>
+    <div class="origin">  <!--한번더묶음-->
+        <div class="ltop">
+            <img src="img/rose.jpg" class="rose">
+        </div>
+    </div>
+
+        <div class="origin">
+        <div class="rtop">
+            <img src="img/rose.jpg" class="rose">
+        </div>
+    </div>
+
+
+        <div class="origin">
+        <div class="lbottom">
+            <img src="img/rose.jpg" class="rose">
+        </div>
+    </div>
+
+
+        <div class="origin">
+        <div class="rbottom">
+            <img src="img/rose.jpg" class="rose"> <!--이미지에 클래스부여가능-->
+        </div>
+    </div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="apple..css">
+</head>
+<body>
+    <div class="alert-box" id="alert">
+        <p>Alert 박스</p>
+        <button onclick="알림창열기('none')">닫기</button>
+        
+    </div>
+    <button onclick="알림창열기('block')">열기</button>
+    
+
+    <script>
+        function 알림창열기 (구멍) {
+            document.getElementById('alert').style.display =구멍;
+        }
+
+        알림창열기('none')
+        알림창열기('block')
+
+    
+    </script>
+</body>
+</html>
+

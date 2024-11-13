@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .origin{
+            width: 210px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 40px;
+            float:left;
+        }
+
+        .scalex:hover{
+            transform: scaleX(1.2);
+        }
+
+        .scaley:hover{
+            transform: scaley(1.2);
+        }
+
+        .scale:hover{
+            transform: scale(0.7);  /*트랜스폼 움직이는것*/
+        }
+
+        hr{
+            clear: both;
+            border: 1;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background:green ;
+            border-radius: 5px;
+            transition: 1s;   
+        }
+
+        .box:hover{
+            background: yellow;
+
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="origin">
+        <div class="scalex">
+            <img src="img/4-2 scale.jpg">
+        </div>
+    </div>
+
+    <div class="origin">
+        <div class="scaley">
+            <img src="img/4-2 scale.jpg">
+        </div>
+        </div>
+
+
+    <div class="origin">
+        <div class="scale">
+            <img src="img/4-2 scale.jpg">
+        </div>
+
+    </div>
+
+    </div>
+    <hr>
+
+    <div class="box">
+        </div>
+
+        
+    
+</body>
+</html>

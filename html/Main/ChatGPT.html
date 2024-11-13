@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const star = document.querySelector('#my');
+            star.style.position = 'absolute';
+
+            const block = 20; // 이동 단위
+            let x = Math.floor(window.innerWidth / 2 / block) * block; // 중앙의 X 좌표
+            let y = block; // 아래에서 20px 위쪽
+
+            const print = () => {
+             // Y 좌표를 bottom으로 설정
+            };
+            print();
+
+            const [left, up, right, down] = [37, 38, 39, 40];
+            document.body.addEventListener('keydown', (event) => { 
+                switch (event.keyCode) { 
+                    case left:
+                        x -= block; // block만큼 왼쪽 이동
+                        break;
+                    case up:
+                        y += block; // block만큼 위로 이동
+                        break; 
+                    case right:
+                        x += block; // block만큼 오른쪽 이동
+                        break;
+                    case down:
+                        y -= block; // block만큼 아래로 이동
+                        break;
+                }
+                print(); // 위치 업데이트
+            });
+        });                        
+    </script>
+</head>
+<body>
+    <h1 id="my">★</h1>
+    <h2 id="ddong">떵</h2>
+</body>
+</html>

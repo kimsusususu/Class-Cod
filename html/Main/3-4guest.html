@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요안도라 소개</title>
+
+    <style>
+        body{
+            font: 14px "맑은 고딕";
+            background: linear-gradient(to bottom, skyblue, white 50%); /*linear-gradient 투바텀 아래방향으로 스카이블루 시작했다가 50%지점까지 흰색으로 바뀜*/
+            background-attachment: fixed; /*크기상관없이 한번만*/
+
+        }
+
+
+        #container{
+            
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #E7E7E7;
+        }
+
+        #content{
+            background-color: #fff;
+            padding-top: 5px;
+            padding-left: 10px;
+        }
+
+        #sidebar img:hover{
+            border: 1px solid #000;
+            opacity:1.0;  /*투명도*/
+        }
+        footer{
+            padding:10px 0;
+            background-color: #061f1f;
+            color: #fff;
+            text-align: center;
+            clear:both; /*푸터는 해주는게 좋음 떠있게하는 명령어*/
+        }
+
+        @media screen and (max-width:559px){
+            #container{
+                width: 320px;
+            }
+
+            #main_header{
+                height: 100px;
+                background: #061f1f;
+            }
+
+            #main_header h1{
+                position: absolute;
+                margin-left: 15px;
+            }
+
+            .header1{
+                color:#ff0;
+                font-size: 3em;
+                font-family: Arial;
+                text-shadow: 0px 1px 1px #fff;
+            }
+
+            #main_nav ul{
+                list-style: none;
+            }
+
+            #main_nav ul li{
+                width: 280px;
+                margin-bottom: 10px;
+                margin-left: -20px;
+
+            }
+
+            #main_nav a{
+                display: block;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                padding:10px 5px;
+                text-align: center;
+                text-decoration: none;
+            }
+
+            #content{
+                width: 310px;
+                padding: 5px;
+                
+            }
+            #sidebar{
+                width: 320px;
+                text-align: center;
+                margin-top: 5px;
+            }
+
+            #sidebar img{
+                border: 1px solid #ccc;
+                width: 90%;
+            }
+        }
+
+        /*모바일 끝*/
+
+        @media screen and (min-width:560px) and (max-width:1023px){
+            #container{
+            width: 580px;
+            text-align: center;
+            margin:0 auto;
+        }
+
+        #main_header{
+            height: 200px;
+            margin-top: 0px;
+            background-image: url(img/q13.png);
+            background-repeat: no-repeat;
+            background-position: left top;
+        }
+
+        #main_header h1{
+            position: absolute;
+            margin-top: 35px;
+            margin-left: 20px;
+        }
+
+        .header1{
+            font-size: 4em;
+            font-family: Arial;
+            color: #ff0;
+
+            text-shadow: 0px 1px 1px #000;
+
+        }
+
+        #main_nav{
+            background: #060;
+            margin-top: -15px;
+            width: 100%;
+            height: 60px;
+        }
+
+        #main_nav ul{
+            list-style: none;
+
+            padding-top: 10px;
+            padding-bottom: 5px;
+
+
+
+        }
+
+        #main_nav ul li{
+            float: left;
+            
+        }
+        #main_nav a{
+            padding: 10px 5px 5px 5px;
+            display: block;
+            color: #fff;
+            width: 100px;
+            text-decoration: none;
+        }
+        #main_nav a:hover{
+            color: red;
+        }
+
+        #content{
+            width: 720px;
+            float: left;
+        }
+
+        #sidebar{
+            width: 550px;
+            height: 550px;
+            background-color: #dfd;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+
+        #sidebar img{
+            width: 32%;
+            text-align: center;
+            border: 1px #ccc; 
+        }
+
+    }
+
+        @media screen and (min-width:1024px){
+        #container{
+                width: 960px;
+
+            }
+
+        #main_header{
+                height:280px;
+                margin-top: 0px;
+                background-image: url(img/q13.png);
+                background-repeat: no-repeat;
+                background-position: left top;   
+        }
+        #main_header h1{
+            position: absolute;
+            margin-top: 35px;
+            margin-left: 20px;
+        }
+        .header1{
+            font-size: 5em;
+            color: #ff0;
+            font-family: Arial;
+            text-shadow: 0px 1px 1px #000;
+
+        }
+
+        #main_nav{
+            margin-top: -15px;
+            width: 100%;
+            height: 70px;
+            background-color: #060;
+        }
+
+        #main_nav ul{
+            padding-top: 25px;
+            list-style:none;
+            
+        }
+
+        #main_nav ul li{
+            float:left;
+
+
+        }
+
+        #main_nav a{
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            width: 220px;
+
+        }
+
+        #content{
+            width: 680px;
+            float: left;
+
+            
+        }
+
+        #sidebar{
+            float: right;
+            width: 200px;
+            height: 550px;   /*width와height로 공간확보해야 이동*/
+            background-color: #dfd;
+            padding-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+
+
+
+    
+        }
+        #sidebar img{
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+
+
+
+
+        
+
+
+        }
+
+
+
+    </style>
+</head>
+
+<style>
+    
+</style>
+
+<body>
+    <div id="container">
+        <header id="main_header">
+            <h1 class="header1">Joandora</h1>
+
+        </header>
+        <nav id="main_nav">
+            <ul>
+                <li><a href="#">이용 안내</a></li>
+                <li><a href="#">객실 소개</a></li>
+                <li><a href="#">예약 방법</a></li>
+                <li><a href="#">예약 하기</a></li>
+            </ul>
+
+        </nav>
+
+        <section id="content">
+            <h2>요안도라 소개</h2>    
+                <article>
+                  <h3>¤ 요안도라는 게스트 하우스(Guest House) 형식의 농어촌 민박입니다</h3>
+                 <p>성산의 날씨는 다음주 내내 높은 구름에 햇살 가득이라고 합니다. 목요일이면 섭씨 27도까지 오른다고 하지만, 늘 부는 바람이 쾌적한 균형을 잡아 마당에 마당에 나가 앉아 있는 시간이 많아질듯 합니다.</p>
+                 <p>오늘은 사진에 보이는 긴 돌담을 따라 들어오는 요안도레 올레 입구에 특곤색의 대문을 달았습니다.</p>
+                 <p>내일은 두달 여동안 밖거리에 만든 게스트 하우스에 연백색의 황토 페인트를 칠할 예정입니다. <br>
+                   그리고 이것저것 사소한 정리를 마치고 나면, 나이 드시고 젊고 한 미지의 새식구들을 설렘으로 만나고 함께하고, 도시의 바쁜 생활로 소원해진 오래된 친구와의 우정을 이 제주에서 새롭게 열어나가기 위해 요안도라를 세상에 알리려고 합니다.</p>
+                 <p>그럼 이 홈페이지를 공식적으로 체계적으로 갖추면서, 그동안 공사로 어수선해 올려드리지 못한 집 안팎 사진들을 상세하게 올리고 당신을 만날 채비를 마치겠습니다.</p>    
+             </article>
+        </section>
+        <aside id="sidebar">
+            <a><img src="img/1jo.jpg"></a>
+            <img src="img/2.jo.jpg">
+            <img src="img/3.jo.jpg">
+
+        </aside>
+        <footer>
+            <p>제주특별자치도 남제주군 성산읍 수산리 158번지</p>
+            <address>
+                Copyright @ All rights reserved.
+            </address>
+        </footer>
+    </div>
+    
+</body>
+</html>

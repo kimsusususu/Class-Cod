@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .photo{
+            margin-top: 50px;  /*?*/
+            margin-left: 100px;
+        }
+
+        .photo:hover{
+            transform: scale(1.5);  /*scale 1.5배 커짐*/
+            transform-origin: left top; /*left top을 기준으로 커짐*/
+            box-shadow: 5px 5px 5px black;
+            transition: 1s;
+        }
+
+        
+    </style>
+</head>
+<body>
+            <img src="img/lamp.jpg" width="250" height="188" class="photo">
+</body>
+</html>           

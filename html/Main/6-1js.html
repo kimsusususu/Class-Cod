@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*const object = {
+    name: '혼자 공부하는 파이썬',
+    price: 18000,
+    publisher: '한빛미디어'
+    }
+
+
+ object.name = object.name !== undefined ? object.name : '제목 미정'
+ object.author = object.author !== undefined ? object.author : '저자 미상'
+
+ console.log(JSON.stringify(object, null, 2))*/
+
+
+        /*const object={         *객체기반의 다중할당*
+            name:'혼자 공부하는 파이썬',
+            price:18000,
+            publisher:'한빛미디어'
+        }
+
+        const {name,price} = object
+        console.log('# 속성 이름 그대로 꺼내서 출력')
+        console.log(name,price)
+        console.log('')
+
+        const {a=name,b=price}=object
+        console.log('# 다른 이름으로 속성 꺼내서 출력하기')
+        console.log(a,b)*/
+
+
+        /*                        *얕은 복사*
+        const 물건_200301 = ['우유','식빵']
+        const 물건_200302 = 물건_200301
+        물건_200302.push('고구마')
+        물건_200302.push('토마토')
+
+        console.log(물건_200301)
+        console.log(물건_200302)  정답은 같은 값이 나옴
+        */
+        
+         
+        /*사용법
+        [...배열]         *깊은복사*
+
+        복사해서 넣고 다른 객체가됨
+
+        const 물건_200301 = ['우유','식빵']
+        const 물건_200302 = [...물건_200301]
+        물건_200302.push('고구마')
+        물건_200302.push('토마토')
+
+        console.log(물건_200301)
+        console.log(물건_200302)
+        */
+
+        /*        *얖은복사 예시*
+        const 구름 = {
+            이름:'구름',
+            나이:6,
+            종족:'갱얼쥐'
+        }
+
+        const 별 = 구름
+        별.이름 = '별'
+        별.나이 = 1
+
+        console.log(JSON.stringify(구름))
+        console.log(JSON.stringify(별))*/
+
+        
+        /*
+        const 구름 = {
+            이름:'구름',
+            나이:6,
+            종족:'강아지'
+        }
+
+        const 별 = {...구름}
+        별.이름='별'
+        별.나이=1
+
+        console.log(JSON.stringify(구름))
+        console.log(JSON.stringify(별))
+        */
+
+        function printLang(code) {
+        return printLang._lang[code]
+    }
+        printLang._lang = {
+ko: '한국어',
+en: '영어',
+ja: '일본어',
+fr: '프랑스어',
+es: '스페인어' }
+console.log('printLang("ko"):', printLang('ko'))
+console.log('printLang("en"):', printLang('en'))
+
+</script>
+</body>
+</html>

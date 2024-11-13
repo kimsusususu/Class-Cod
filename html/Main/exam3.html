@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    4.전체선택 체크박스<br>
+
+    전체선택<input type="checkbox" name="all" onclick="check(this)"><br>
+    
+        <input type="checkbox" name="game" class="lang">java<br>
+        <input type="checkbox" name="game" class="lang">sql<br>
+        <input type="checkbox" name="game" class="lang">angular<br>
+
+        <script>
+            function check(n) {
+                var lang = document.querySelectorAll(".lang");
+                for (var i = 0; i < lang.length; i++)
+                lang[i].checked = n.checked;
+            }
+        </script>
+    
+
+    
+</body>
+</html>

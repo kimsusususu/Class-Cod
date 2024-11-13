@@ -1,0 +1,37 @@
+API -애플리케이선 프로그램의 보조역할
+
+애플리케이션 -완성된 하나의 프로그램
+
+RESTfulAPI = REST API
+
+REpresentational State Transfer - http 프로토콜의 규약을 지정해줌
+
+규칙
+
+1. 자원 이름은 명사형으로 알파벳 소문자 사용
+   (url)
+
+2.자원 이름으로 단어를 2개 이상 사용한다면
+  붙임표(-)로 연결
+
+3.자원간에 계층이 있다면 슬래시(/)로 구분하되
+ URL의 끝에는 슬래시를 붙이지 않음
+
+HTTP 요청 방식 따라(CRUD)
+
+POST : 자원을 생성(Create)
+
+GET : 자원을 가져옴 (Read)
+
+PUT : 자원을 수정함(Update)
+
+DELETE : 자원을 삭제함 (Delete)
+
+
+MVC 패턴
+
+M(모델)
+
+V(뷰)
+
+C(컨트롤러)

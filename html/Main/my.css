@@ -1,0 +1,105 @@
+body{
+    background: rgb(230, 212, 193);
+}
+
+
+
+#fdiv{
+    margin: 0 auto;
+    width: 1024px;
+    height: 800px;
+
+    border: solid 1px rgb(117, 117, 117);
+    
+}
+
+
+
+header{
+    margin: 0 auto;
+    width: 1024px;
+    height: 280px;
+    text-align:center;
+    background-image: url(./img/beautiful-tropical-empty-beach-sea-ocean-with-white-cloud-on-blue-sky-background_74190-13665.avif);
+    background-size: cover;
+    background-position: 0px  600px;
+   
+    
+}
+header h1{
+    height: 150px;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align:center;
+
+    
+}
+
+header ul{
+    
+    width: 100%;
+
+
+    display: flex;
+    margin: 0px auto;
+    padding: 0px;
+    
+    
+}
+
+
+header ul li{
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 20px;
+    background: springgreen;
+    list-style: none;
+    box-shadow: 5px 3px 2px;
+    
+}
+
+
+ul{
+   list-style: none;
+   
+}
+
+
+
+.mains{
+    width: 800px;
+    float:right;
+    border: 1px solid black;
+    margin-right: 10px;
+    height: 520px;
+}
+.mains ul{
+    display: flex;
+}
+
+.mains ul li{
+    margin: 50px;
+}
+
+#aside {
+    width: 200px;
+    height: 520px;
+    float:left;
+    border: 1px solid black;
+}
+
+#aside nav ul li{
+    margin-top: 50px;
+}
+
+footer{
+    background-color: black;
+    width: 1024px;
+    height: 100px;
+    color: aliceblue;
+    margin:0 auto;
+    margin-top: -14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

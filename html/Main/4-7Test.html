@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div{
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 50px;
+            
+        }
+
+
+        .one{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background-color: greenyellow;
+            animation-name: shape;
+            animation-duration: 3s;
+
+        }
+
+        .one2{
+            width: 100px;
+            height: 100px;
+            border:1px solid black;
+            background-color: purple;
+            animation-name: rotate;     /*id지정*/
+            animation-duration: 3s;  /*회전하는 시간*/
+        }
+
+        @keyframes shape{
+            from{
+                border: 1px solid black;
+            }
+            to{
+                border: 1px solid black;
+                border-radius: 50%;
+            }
+        }  
+        @keyframes rotate{
+            from{
+                border: 1px solid black;
+                transform: rotate(0deg);
+            }
+            to{
+                border: 1px solid black;
+                transform: rotate(45deg);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+        <div class="one">
+
+        </div>
+
+        <div class="one2">
+    </div>
+
+</body>
+</html>

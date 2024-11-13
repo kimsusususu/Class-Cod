@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+        <style>
+            #weather, #js_weather {
+                width: 60px;
+                height: 60px;
+                background: url(img/js1.png) no-repeat;
+                cursor: pointer;
+            }
+
+            #weather:hover {
+                background-position: -160px 0;
+            }
+        </style>
+    <!-- CSS 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+  테마 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+ 
+  자바스크립트 
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+-->
+
+
+
+   <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+ 테마 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+ 자바스크립트
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+-->
+
+
+
+
+   <!--<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const textarea = document.querySelector('textarea')
+
+        const h1 = document.querySelector('h1')
+
+        let timerId
+
+
+        textarea.addEventListener('focus', (event) => {
+            timerId = setInterval(() => {
+                const length = textarea.value.length
+
+                h1.textContent = `글자 수: ${length}`
+
+            },50)
+        })
+        textarea.addEventListener('blur', (event) => { 
+            clearInterval(timerId)
+
+        })
+    })
+   </script>-->
+   
+   
+   
+    <!--<script>            7-2(24)할 일 목록 만들기
+        document.addEventListener('DOMContentLoaded', () =>{
+            
+            const input = document.querySelector('#todo')
+            const todoList = document.querySelector('#todo-list')
+            const addButton = document.querySelector('#add-button')
+
+
+            let keyCount = 0
+
+            const addTodo = () =>{
+                if (input.value.trim() === '') {
+                    alert('할일 입력해')
+                    return
+                }
+
+                const item = document.createElement('div')
+                const checkbox = document.createElement('input')
+                const text = document.createElement('span')
+                const button = document.createElement('button')
+
+                const key = keyCount
+                keyCount += 1
+
+
+                item.setAttribute('data-key',key)
+                item.appendChild(checkbox)
+                item.appendChild(text)
+                item.appendChild(button)
+                todoList.appendChild(item)
+
+                checkbox.type = 'checkbox'
+                checkbox.addEventListener('change', (event) => {
+                    item.style.textDecoration
+                    =event.target.checked ? 'line-through' :'' 
+                })
+
+                text.textContent = input.value
+
+                button.textContent = '제거하기'
+                button.addEventListener('click', () => {
+                    removeTodo(key)
+                })
+
+                input.value = ''
+            }
+            const removeTodo = (key) => {
+                const item = document.querySelector(`[data-key="${key}"]`)
+                todoList.removeChild(item)
+            }
+
+            addButton.addEventListener('click', addTodo) 
+            input.addEventListener('keyup', (event) => {
+
+                const ENTER = 13
+                if (event.keyCode === ENTER) {
+                    addTodo() 
+                }
+            })
+        })
+    </script> -->
+
+
+
+
+
+    <!--<script>                    7-2(23)기본 이벤트 막기
+        document.addEventListener("DOMContentLoaded", () => {
+        let status = false
+        
+        const checkbox = document.querySelector('input')
+        checkbox.addEventListener('change', (event) => {
+            status = event.currentTarget.checked
+        })
+
+        const link = document.querySelector('a')
+        link.addEventListener('click', (event) => {
+            if(!status) {
+                event.preventDefault()
+            }
+        })
+    })
+
+    </script>-->
+
+
+
+
+    <!--<script>                   컨텍스트 메뉴 출력기본이벤트를 제거
+         document.addEventListener('DOMContentLoaded', () => {
+
+            
+            const imgs = document.querySelectorAll('img')
+
+
+            imgs.forEach((img) => {
+
+                img.addEventListener('contextmenu', (event) => {
+
+                    event.preventDefault() 컨텍스트 메뉴 출력하는 기본 이벤트 제거
+
+                })
+            })
+        })
+    </script> -->
+
+
+
+
+
+    <!--                           라디오버튼으로 좋동 고르기  
+    <script>
+         document.addEventListener('DOMContentLoaded', () => {
+            const output = document.querySelector('#output') 
+
+            const radios = document.querySelectorAll('[name=pet]') 
+            radios.forEach((radio) => { 
+
+                radio.addEventListener('change', (event) => { 
+                    const current = event.currentTarget
+                    if (current.checked) { 
+                        output.textContent = `좋아하는 애완동물은 ${current.value}이시군요!` 
+                    }
+                })
+            })
+        })
+    </script>-->
+    
+    
+    
+    <!--<script>                   체크 박스 활용하기 소스코드
+        document.addEventListener('DOMContentLoaded', () => {
+            let [timer, timerId] = [0, 0]
+            const h1 = document.querySelector('h1')
+
+            const checkbox = document.querySelector('input')
+
+            checkbox.addEventListener('change', (event) => {
+                if (event.currentTarget.checked) {
+
+
+                    timerId = setInterval(() => {
+
+                        timer += 1
+                        h1.textContent = `${timer}초`
+                    
+                    },1000)
+                }else {
+                    clearInterval(timerId)
+                }
+            })
+        })
+    </script> -->
+</head>
+<body>
+
+    <div id="weather"></div>
+  <hr>
+  <div id="js_weather"></div>
+
+  <script>
+    const weatherBox = document.getElementById('js_weather');
+
+    weatherBox.onmouseover = function() {
+      this.style.backgroundPosition = '0 -60px';
+    }
+
+    weatherBox.onmouseout = function() {
+      weatherBox.style.backgroundPosition = '0 0';
+    }
+  </script>
+
+    <!--<div class="container">
+        <hr>
+        <form>
+          <div class="row mb-3">
+            <label for="subject" class="col-sm-2 col-form-label">과목명</label>
+            <div class="col-sm-10">
+              <select class="form-select" id="subject" name="subject">
+                <option selected>선택하세요...</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">자바스크립트</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="userid" class="col-sm-2 col-form-label">아이디</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="userid" name="userid" placeholder="아이디 입력(onchange)">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="name" class="col-sm-2 col-form-label">이름</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" name="name" placeholder="이름 입력(oninput)">
+            </div>
+          </div>
+        </form>
+        [참고] https://getbootstrap.com/docs/5.3/forms/layout/#horizontal-form
+      </div>
+      
+      <script>
+        // 이벤트 대상 + 이벤트 트리거 + 이벤트 핸들러
+        document.querySelector('select[name="subject"]').onchange = function() {
+          console.log(this); // document.querySelector('select[name="subject"]')
+          console.log(this.value);
+        }
+      
+        document.querySelector('[name="userid"]').onchange = function() {
+          console.log(this.value);
+        }
+      
+        document.querySelector('[name="name"]').oninput = function() {
+          console.log(this.value);
+        }
+      </script>-->
+
+
+
+
+       <!--                     예시 연습css가져오기
+    <div class="container">
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-primary" onclick="alert('자바스크립트 코드를 직접 입력!')">인라인 JS 코드</button>
+          <button type="button" class="btn btn-success" onclick="myFunction();">인라인 함수 호출</button>
+          <button type="button" class="btn btn-danger">느슨한 연결1</button>
+          <button type="button" class="btn btn-warning">느슨한 연결2</button>
+        </div>
+        https://getbootstrap.com/docs/5.3/components/button-group/#basic-example
+      </div>
+      
+      <script>
+        function myFunction() {
+          alert('HTML 요소의 이벤트 속성에서 myFunction() 호출');
+        }
+      
+        // 이벤트 대상 + 이벤트 트리거 + 이벤트 핸들러
+        document.querySelector('.btn-danger').onclick = function() {
+          alert('이벤트 핸들러');
+        }
+      
+        // 이벤트 대상 + 이벤트 트리거 + 이벤트 리스너
+        document.querySelector('.btn-warning').addEventListener('click', function() {
+          alert('이벤트 리스너');
+        });
+      </script> -->
+      
+      
+    <!--  hex  or  toString
+        <div class="container">
+          <ul class="list-group">
+            <li class="list-group-item">첫 번째</li>
+            <li class="list-group-item">두 번째</li>
+            <li class="list-group-item">세 번째</li>
+            <li class="list-group-item">네 번째</li>
+            <li class="list-group-item">다섯 번째</li>
+          </ul>
+        </div>
+        
+        <script>
+          const lists = document.getElementsByTagName('li');
+        
+          console.log(lists);
+          console.log(lists.length);
+          console.log(typeof lists);
+        
+          function formatHex(hex) {
+            return (hex.length == 1) ? '0' + hex : hex;
+          }
+        
+          for (let list of lists) {
+            let rColor = Math.floor(Math.random() * 255).toString(16);
+            let gColor = Math.floor(Math.random() * 255).toString(16);
+            let bColor = Math.floor(Math.random() * 255).toString(16);
+        
+            let color = formatHex(rColor) + formatHex(gColor) + formatHex(bColor);
+        
+            list.style.backgroundColor = '#' + color;
+          }
+        </script>-->
+        
+
+    <!--<div class="container">
+        <ul class="list-group">
+          <li class="list-group-item">첫 번째</li>
+          <li id="two" class="list-group-item">두 번째</li>
+          <li class="list-group-item">세 번째</li>
+          <li id="four" class="list-group-item">네 번째</li>
+          <li class="list-group-item">다섯 번째</li>
+        </ul>
+      </div>
+
+      <script>
+        document.getElementById('two').style.backgroundColor = 'lightblue';
+    
+        const list = document.getElementById('four');
+        console.log(list);
+        console.log(typeof list);
+        list.style.backgroundColor = 'lightcoral';
+      </script>-->
+    
+    
+
+    <!--<h1></h1>
+    <textarea></textarea> -->
+
+
+    <!--<h1>할 일 목록</h1>        7-2(24)할일 목록만들기
+    <input id="todo">
+    <button id="add-button">추가하기</button>
+    <div id="todo-list">
+
+    </div>-->
+
+
+
+    <!--<input type="checkbox">    7-2(23)기본이벤트 막기
+    <span>링크 활성화</span>
+    <br>
+    <a href="http://hanbit.co.kr">한빛미디어</a>-->
+
+
+
+    <!--                           컨텍스트 메뉴출력 기본이벤트제거
+    <img src="http://placehold.com/300/300" alt=""> -->
+
+
+
+
+    <!--<input type="checkbox">    체크박스 활용하기 소스
+    <span>타이머 활성화</span>
+    <h1></h1> -->
+
+
+
+            <!--                   라디오버튼으로 좋동 고르기
+    <h3># 좋아하는 애완동물을 선택해</h3>
+    <input type="radio" name="pet" value="강아지">
+    <span>강아지</span>
+    <input type="radio" name="pet" value="고양이">
+    <span>고양이</span>
+    <input type="radio" name="pet" value="햄터">
+    <span>햄스터</span>
+    <input type="radio" name="pet" value="기타">
+    <span>기타</span>
+    <hr>
+    <h3 id="output"></h3>
+-->
+</body>
+</html>
